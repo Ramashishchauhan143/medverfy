@@ -1,5 +1,12 @@
 {
-  "dependencies": {
-    "react-router-dom": "^7.11.0"
+  "name": "medicine-project",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix medicine-backend\" \"npm run dev --prefix medicine-frontend\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
   }
 }
+
+

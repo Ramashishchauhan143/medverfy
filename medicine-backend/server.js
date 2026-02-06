@@ -5,15 +5,23 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
+// health check
+app.get("/", (req, res) => {
+    res.send("Medicine Backend API is running");
+});
+
+// medicine API
 app.get("/medicine", async (req, res) => {
     try {
         let name = req.query.name;
 
         if (!name) {
-            return res.json({ success: false, error: "Please provide a medicine name" });
+            return res.json({
+                success: false,
+                error: "Please provide a medicine name"
+            });
         }
 
-        
         if (name.toLowerCase() === "paracetamol") {
             name = "acetaminophen";
         }
@@ -28,7 +36,7 @@ app.get("/medicine", async (req, res) => {
         });
 
     } catch (error) {
-        console.log(error);
+        console.log(error.message);
         return res.json({
             success: false,
             error: "Medicine not found or API error"
@@ -36,6 +44,7 @@ app.get("/medicine", async (req, res) => {
     }
 });
 
-app.listen(5000, () => {
-    console.log("Backend API running on http://localhost:5000");
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+    console.log(`Backend API running on port ${PORT}`);
 });
