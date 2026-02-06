@@ -29,29 +29,30 @@ function App() {
 
 
   const searchMedicine = async (medicineName) => {
-    if (!medicineName) return;
+  if (!medicineName) return;
 
-    setLoading(true);
-    setError("");
-    setData(null);
+  setLoading(true);
+  setError("");
+  setData(null);
 
-    try {
-      const res = await fetch(
-        `http://localhost:5000/medicine?name=${medicineName}`
-      );
-      const result = await res.json();
+  try {
+    const res = await fetch(
+      `https://medverfy-backend.onrender.com/medicine?name=${medicineName}`
+    );
 
-      if (result.success) {
-        setData(result.data);
-      } else {
-        setError("No data found!");
-      }
-    } catch {
-      setError("API Error!");
+    const result = await res.json();
+
+    if (result.success) {
+      setData(result.data);
+    } else {
+      setError("No data found!");
     }
+  } catch (err) {
+    setError("API Error!");
+  }
 
-    setLoading(false);
-  };
+  setLoading(false);
+};
 
 
 
