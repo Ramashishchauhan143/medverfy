@@ -3,8 +3,11 @@ body {
     135deg,
     #0f172a,
     #020617
+    
   );
+
   margin: 0;
+  padding: 0;
   font-family: "Segoe UI", sans-serif;
   color: white;
 }
@@ -512,3 +515,9 @@ body {
   border: none;
 }
 
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.6; }
+  100% { transform: scale(1); opacity: 1; }
+}

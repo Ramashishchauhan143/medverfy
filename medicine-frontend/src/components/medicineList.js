@@ -24,3 +24,32 @@ const medicineList = [
 ];
 
 export default medicineList;
+
+
+
+
+// const medicineList = [
+// "paracetamol",
+// "ibuprofen",
+// "amoxicillin",
+// "azithromycin",
+// "doxycycline",
+// "ciprofloxacin",
+// "metformin",
+// "omeprazole",
+// "cetirizine",
+// "aspirin",
+// "pantoprazole",
+// "atorvastatin",
+// "ranitidine",
+// "atenolol",
+// "losartan",
+// "amlodipine",
+// "clindamycin",
+// "metronidazole",
+// "fluconazole",
+// "diclofenac"
+// ];
+
+// export default medicineList;
+

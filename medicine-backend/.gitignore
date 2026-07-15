@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Build folders
+dist
+build
+node_modules
+.env
+.env.*
+logs
+*.log
