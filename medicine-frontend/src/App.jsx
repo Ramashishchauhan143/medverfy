@@ -40,9 +40,9 @@ function Home() {
     setEvents([]);
 
     try {
-      const res = await fetch(
-        `https://medverfy-backend.onrender.com/medicine?name=${name}`
-      );
+    const res = await fetch(
+  `https://medverfy.onrender.com/medicine?name=${name}`
+);
       const result = await res.json();
 
       if (result.success) {
@@ -63,9 +63,9 @@ function Home() {
     if (!name) return;
 
     try {
-      const res = await fetch(
-        `https://medverfy-backend.onrender.com/medicine?name=${name}`
-      );
+    const res = await fetch(
+  `https://medverfy.onrender.com/medicine?name=${name}`
+);
       const result = await res.json();
 
       if (result.success) {

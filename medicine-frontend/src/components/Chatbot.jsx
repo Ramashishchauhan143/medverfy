@@ -29,7 +29,7 @@ function Chatbot() {
       setLoading(true);
 
       const res = await fetch(
-        "http://localhost:5000/chat",
+        "https://medverfy.onrender.com/chat",
         {
           method: "POST",
           headers: {
